@@ -33,7 +33,7 @@ I used 5 tables from the formula one dataset(results, races, constructors, drive
 
 
 ### Database diagram
-I created a database diagram so we can have a quick look at our relational dataset.
+I have created a database diagram so you can have a quick look at the relational dataset.
 
 <img width="923" alt="Screenshot 2022-11-15 at 18 03 01" src="https://user-images.githubusercontent.com/113236007/201982091-5acf9fa8-b8ee-4d94-a75b-18d92498a6d1.png">
 
