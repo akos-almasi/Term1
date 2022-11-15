@@ -2,7 +2,8 @@
 
 A quick overview what I did in the term1 project.
 
-![sqlf1 (250 × 200 mm)](https://user-images.githubusercontent.com/113236007/202043192-9975c1f3-55c3-47a9-a1b8-bd0e5be5cb6f.png)
+<img width="514" alt="Screenshot 2022-11-16 at 0 06 31" src="https://user-images.githubusercontent.com/113236007/202043774-1814a103-8a3d-48ba-8db1-6edc2f5adad0.png">
+
 
 
 
