@@ -142,3 +142,20 @@ GROUP BY driverId, forename, surname, driverRef, team
 ORDER BY driverId;
 ```
 
+Aggregation based on whether the drivers received points on a race or not
+```
+DROP VIEW IF EXISTS point_scorers;
+
+CREATE VIEW `point_scorers` AS
+SELECT raceId, driverId, forename, surname, driverRef, positionOrder, points,
+	CASE
+		WHEN points = 0
+			THEN 'No point'
+		ELSE
+			'Earned points'
+	END
+    AS race_outcome
+FROM tablef1
+ORDER BY race_outcome;
+```
+
