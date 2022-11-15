@@ -1,4 +1,4 @@
-# Data Engineering Term1 Project
+# Data Engineering Term1
 
 A quick overview what I did in the term1 project.
 
