@@ -48,8 +48,8 @@ CREATE PROCEDURE AllF1data()
 BEGIN
 	DROP TABLE IF EXISTS tablef1;
     CREATE TABLE tablef1 AS
-			    SELECT 
-				        rr.resultId,
+	SELECT 
+		rr.resultId,
                 r.raceId,
                 r.raceyear,
                 r.racename,
@@ -64,11 +64,11 @@ BEGIN
                 cir.name AS circuit_name,
                 cir.country,
                 con.constructorname AS team
-           FROM raceresults AS rr
-			INNER JOIN drivers AS d
-				USING (driverId)
+	FROM	raceresults AS rr
 			INNER JOIN constructor AS con
 				USING (constructorId)
+			INNER JOIN drivers AS d
+				USING (driverId)
 			INNER JOIN races AS r
 				USING (raceId)
 			INNER JOIN circuits AS cir
@@ -114,10 +114,10 @@ BEGIN
                 cir.country,
                 con.constructorname AS team
         FROM raceresults AS rr
-			INNER JOIN drivers AS d
-				USING (driverId)
 			INNER JOIN constructor AS con
 				USING (constructorId)
+			INNER JOIN drivers AS d
+				USING (driverId)
 			INNER JOIN races AS r
 				USING (raceId)
 			INNER JOIN circuits AS cir
