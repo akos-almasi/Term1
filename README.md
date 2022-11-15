@@ -132,6 +132,8 @@ I created 4 data marts based on the following questions:
 2. How many seasons has each driver appeared in F1?
 3. How many hungaroring victories does each driver have?
 4. How many points have each driver scored within each team during their career?
+
+One example for data mart
 ```
 DROP VIEW IF EXISTS driverpoints_per_team ;
 
