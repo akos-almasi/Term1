@@ -28,7 +28,7 @@ CREATE TABLE circuits(
 I created 5 sql files (which can be found in the data folder) from the original csvs and loaded them into the tables
 
 ### Database diagram
-I created a database diagram so we can have a quick look at our dataset.
+I created a database diagram so we can have a quick look at our relational dataset.
 
 <img width="923" alt="Screenshot 2022-11-15 at 18 03 01" src="https://user-images.githubusercontent.com/113236007/201982091-5acf9fa8-b8ee-4d94-a75b-18d92498a6d1.png">
 
