@@ -2,7 +2,8 @@
 
 A quick overview what I did in the term1 project.
 
-![sqlf1](https://user-images.githubusercontent.com/113236007/202042572-5b0b7a73-7e4e-45ff-8cef-9850064c8e41.jpg)
+![sqlf1 (250 × 200 mm)](https://user-images.githubusercontent.com/113236007/202043192-9975c1f3-55c3-47a9-a1b8-bd0e5be5cb6f.png)
+
 
 
 
