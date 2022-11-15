@@ -77,4 +77,68 @@ DELIMITER ;
 
 ```
 
+## ETL pipeline
+Since we have many races in a year it makes sense to create an ETL pipeline to make sure that my denormalized table is up to date after a race is completed.
+
+```
+DROP TABLE IF EXISTS log;
+CREATE TABLE log (log VARCHAR (255) NOT NULL);
+
+# Create a trigger
+DROP TRIGGER IF EXISTS add_race;
+
+DELIMITER $$
+
+CREATE TRIGGER add_race
+AFTER INSERT ON races FOR EACH ROW
+BEGIN
+	-- log the order number of the newley inserted order
+	INSERT INTO log SELECT CONCAT('new.raceId: ', NEW.raceId);
+    
+    INSERT INTO tablef1
+	SELECT 
+		rr.resultId,
+                r.raceId,
+                r.raceyear,
+                r.racename,
+                d.driverId,
+                d.forename,
+                d.surname,
+                d.drivercode,
+                d.driverRef,
+                rr.grid,
+                rr.positionOrder,
+                rr.points,
+                cir.name AS circuit_name,
+                cir.country,
+                con.constructorname AS team
+        FROM raceresults AS rr
+			INNER JOIN drivers AS d
+				USING (driverId)
+			INNER JOIN constructor AS con
+				USING (constructorId)
+			INNER JOIN races AS r
+				USING (raceId)
+			INNER JOIN circuits AS cir
+				USING (circuitId)
+		WHERE raceId = NEW.raceId;
+END $$
+DELIMITER ;
+```
+## Data mart
+Now that we have our denormalized table and made sure that it would be up to date after a race is added to our races table, we can create views.
+I created 4 data marts based on the following questions:
+1. How many 2nd places do each driver have?
+2. How many seasons has each driver appeared in F1?
+3. How many hungaroring victories does each driver have?
+4. How many points have each driver scored within each team during their career?
+```
+DROP VIEW IF EXISTS driverpoints_per_team ;
+
+CREATE VIEW `driverpoints_per_team` AS
+SELECT driverId, forename, surname, driverRef, team, SUM(points) AS points_earned
+FROM tablef1
+GROUP BY driverId, forename, surname, driverRef, team
+ORDER BY driverId;
+```
 
