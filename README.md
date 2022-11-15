@@ -2,6 +2,9 @@
 
 A quick overview what I did in the term1 project.
 
+![Címsor hozzáadása](https://user-images.githubusercontent.com/113236007/202042200-0ef348a9-0595-47b9-a332-90b511abed5d.png)
+
+
 ## Dataset
 I chose a formula one dataset to deliver the Term1 Project. 
 The dataset can be downloaded from the following website: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
