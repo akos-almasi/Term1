@@ -2,11 +2,6 @@
 
 A quick overview what I did in the term1 project.
 
-<img width="514" alt="Screenshot 2022-11-16 at 0 06 31" src="https://user-images.githubusercontent.com/113236007/202043774-1814a103-8a3d-48ba-8db1-6edc2f5adad0.png">
-
-
-
-
 
 ## Dataset
 I chose a formula one dataset to deliver the Term1 Project. 
