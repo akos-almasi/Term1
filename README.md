@@ -1,6 +1,8 @@
 # Data Engineering Term 1
 
 A quick overview what I did in the term1 project.
+<img width="514" alt="Screenshot 2022-11-16 at 0 06 31" src="https://user-images.githubusercontent.com/113236007/202441783-1bcc887f-d0d7-4c7a-aae4-02facb504ea2.png">
+
 
 
 ## Dataset
