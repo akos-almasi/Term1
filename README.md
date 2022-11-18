@@ -14,18 +14,19 @@ The dataset can be downloaded from the following website: https://www.kaggle.com
 ## Operational layer
 
 ### Create tables
+I just demonstrate how I created one table in the project.
 ```
-CREATE TABLE circuits(
-   circuitId  INTEGER  NOT NULL,
-   circuitRef VARCHAR(255),
-   name       VARCHAR(255),
-   location   VARCHAR(255),
-   country    VARCHAR(255),
-   lat	VARCHAR(255),
-   lng VARCHAR(255),
-   alt INTEGER,
-   url VARCHAR(255),
-   PRIMARY KEY (circuitId)
+CREATE TABLE drivers(
+   driverId    INTEGER  NOT NULL,
+   driverRef   VARCHAR(255),
+   drivernumber	VARCHAR(255),
+   drivercode        VARCHAR(255),
+   forename    VARCHAR(255),
+   surname     VARCHAR(255),
+   dob         VARCHAR(255),
+   drivernationality VARCHAR(255),
+   url 		VARCHAR(255),
+   PRIMARY KEY (driverId)
 );
 ```
 
