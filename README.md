@@ -152,7 +152,7 @@ I created 4 data marts based on the following questions:
 3. How many hungaroring victories does each driver have?
 4. How many points have each driver scored within each team during their career?
 
-One example for data mart
+One example for data mart:
 ```
 DROP VIEW IF EXISTS driverpoints_per_team ;
 
@@ -163,7 +163,7 @@ GROUP BY driverId, forename, surname, driverRef, team
 ORDER BY driverId;
 ```
 
-Aggregation based on whether the drivers received points on a race or not
+Aggregation based on whether the drivers received points on a race or not:
 ```
 DROP VIEW IF EXISTS point_scorers;
 
