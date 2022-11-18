@@ -88,7 +88,8 @@ DELIMITER ;
 ```
 The appearance of the Datawarehouse:
 
-<img width="1201" alt="Screenshot 2022-11-18 at 17 32 03" src="https://user-images.githubusercontent.com/113236007/202754636-df0c32a5-cdd6-4087-8624-6f504a5757ec.png">
+<img width="1211" alt="Screenshot 2022-11-18 at 17 33 26" src="https://user-images.githubusercontent.com/113236007/202755090-d3b37a63-6b6f-474e-8873-c3ee45d01ae7.png">
+
 
 
 
