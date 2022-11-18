@@ -28,7 +28,7 @@ CREATE TABLE circuits(
 ```
 
 ### Load data into the tables
-I created 5 sql files (which can be found in the data folder) from the original csvs and loaded them into the tables
+I created 5 sql files (which can be found in the data folder) from the original csvs and loaded them into the tables in the following order: circuits, drivers, races, constructors, raceresults
 
 ## Analytics
 I wanted to analyse the performance of drivers in formula 1, in order to achieve this I wanted to collect relevant data that is connected to the drivers. 
