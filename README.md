@@ -19,13 +19,13 @@ The dataset can be downloaded from the following website: https://www.kaggle.com
 I just demonstrate how I created one table in the project.
 ```
 CREATE TABLE drivers(
-   driverId    INTEGER  NOT NULL,
-   driverRef   VARCHAR(255),
+   driverId    	INTEGER  NOT NULL,
+   driverRef   	VARCHAR(255),
    drivernumber	VARCHAR(255),
-   drivercode        VARCHAR(255),
-   forename    VARCHAR(255),
-   surname     VARCHAR(255),
-   dob         VARCHAR(255),
+   drivercode  	VARCHAR(255),
+   forename    	VARCHAR(255),
+   surname     	VARCHAR(255),
+   dob         	VARCHAR(255),
    drivernationality VARCHAR(255),
    url 		VARCHAR(255),
    PRIMARY KEY (driverId)
