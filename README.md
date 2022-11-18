@@ -133,7 +133,7 @@ END $$
 DELIMITER ;
 ```
 ## Data mart
-Now that we have our denormalized table and made sure that it would be up to date after a race is added to our races table, we can create views.
+I wanted to answer 4 specific questions so we can have a better understanding about the performance of the drivers.
 I created 4 data marts based on the following questions:
 1. How many 2nd places do each driver have?
 2. How many seasons has each driver appeared in F1?
