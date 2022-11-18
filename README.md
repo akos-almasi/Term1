@@ -86,6 +86,11 @@ END //
 DELIMITER ;
 
 ```
+The appearance of the Datawarehouse:
+
+
+
+
 
 
 ## ETL pipeline
