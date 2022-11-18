@@ -55,22 +55,22 @@ BEGIN
 	DROP TABLE IF EXISTS tablef1;
     CREATE TABLE tablef1 AS
 	SELECT 
-		rr.resultId,
-                r.raceId,
-                r.raceyear,
-                r.racename,
-                d.driverId,
+		d.driverId,
                 d.forename,
                 d.surname,
                 d.drivercode,
                 d.driverRef,
-                rr.grid,
+		rr.grid,
                 rr.positionOrder,
                 rr.points,
+                r.raceId,
+                r.raceyear,
+                r.racename,
+                cir.circuitId,
                 cir.name AS circuit_name,
                 cir.country,
                 con.constructorname AS team
-	FROM	raceresults AS rr
+	FROM 	raceresults AS rr
 			INNER JOIN constructor AS con
 				USING (constructorId)
 			INNER JOIN drivers AS d
@@ -83,6 +83,7 @@ END //
 DELIMITER ;
 
 ```
+
 
 ## ETL pipeline
 Since we have many races in a year it makes sense to create an ETL pipeline to make sure that my denormalized table is up to date after a race is completed.
