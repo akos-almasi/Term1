@@ -95,16 +95,14 @@ The appearance of the Datawarehouse:
 Since we have many races in a year it makes sense to create an ETL pipeline to make sure that my denormalized table is up to date after a race is completed, and added to the races table.
 
 ```
-DROP TABLE IF EXISTS log;
-CREATE TABLE log (log VARCHAR (255) NOT NULL);
 
-# Create a trigger
 DROP TRIGGER IF EXISTS add_race;
+TRUNCATE log;
 
 DELIMITER $$
 
 CREATE TRIGGER add_race
-AFTER INSERT ON races FOR EACH ROW
+AFTER INSERT ON raceresults FOR EACH ROW
 BEGIN
 	-- log the order number of the newley inserted order
 	INSERT INTO log SELECT CONCAT('new.raceId: ', NEW.raceId);
@@ -123,17 +121,19 @@ BEGIN
                 cir.country,
                 con.constructorname AS team
         FROM raceresults AS rr
-			INNER JOIN constructor AS con
-				USING (constructorId)
-			INNER JOIN drivers AS d
-				USING (driverId)
-			INNER JOIN races AS r
-				USING (raceId)
-			INNER JOIN circuits AS cir
-				USING (circuitId)
-		WHERE raceId = NEW.raceId;
+		INNER JOIN constructor AS con
+			USING (constructorId)
+		INNER JOIN drivers AS d
+			USING (driverId)
+		INNER JOIN races AS r
+			USING (raceId)
+		INNER JOIN circuits AS cir
+			USING (circuitId)
+	WHERE raceId = NEW.raceId;
 END $$
+
 DELIMITER ;
+
 ```
 ## Data mart
 I wanted to answer 4 specific questions so we can have a better understanding about the performance of the drivers.
