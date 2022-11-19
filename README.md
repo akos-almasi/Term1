@@ -4,7 +4,7 @@ A quick overview what I did in the Term 1 project.
 
 Tablef1 datawarehouse have been created by joining five tables through stored procedures, which is there to help us analyze the performance of the drivers. I created an ETL pipeline for the datawarehouse and for the datamarts as well.
 
-<img width="692" alt="Screenshot 2022-11-18 at 16 22 22" src="https://user-images.githubusercontent.com/113236007/202740025-0de09334-9d87-46b1-a0d2-074526b7e31e.png">
+<img width="961" alt="Screenshot 2022-11-19 at 14 16 07" src="https://user-images.githubusercontent.com/113236007/202852663-0a0e9e7c-c11f-4e32-8794-7720b7bddc5c.png">
 
 
 
