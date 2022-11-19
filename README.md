@@ -37,7 +37,7 @@ I created 5 sql files (data folder) from the original csvs and loaded them into 
 circuits, drivers, races, constructors, raceresults.
 
 ## Analytics
-I wanted to analyse the performance of drivers in formula 1, in order to achieve this I wanted to collect relevant data that is connected to the drivers. 
+I wanted to analyze the performance of drivers in formula 1, in order to achieve this I wanted to collect relevant data that is connected to the drivers. 
 I used 5 tables from the formula one dataset(results, races, constructors, drivers and circuits).
 
 
@@ -47,7 +47,7 @@ I have created an EER diagram so you can have a quick look at the relational dat
 <img width="923" alt="Screenshot 2022-11-15 at 18 03 01" src="https://user-images.githubusercontent.com/113236007/201982091-5acf9fa8-b8ee-4d94-a75b-18d92498a6d1.png">
 
 ## Analytical layer
-In order to analyse the drivers I created a denormalized data structure (stored procedure).
+In order to analyze the drivers I created a denormalized data structure (stored procedure).
 
 ```
 DROP PROCEDURE IF EXISTS AllF1data;
