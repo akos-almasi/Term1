@@ -148,9 +148,9 @@ One example for data mart:
 DROP VIEW IF EXISTS driverpoints_per_team ;
 
 CREATE VIEW `driverpoints_per_team` AS
-SELECT driverId, forename, surname, driverRef, team, SUM(points) AS points_earned
+SELECT driverId, forename, surname, team, SUM(points) AS points_earned
 FROM tablef1
-GROUP BY driverId, forename, surname, driverRef, team
+GROUP BY driverId, forename, surname, team
 ORDER BY driverId;
 ```
 
@@ -159,7 +159,7 @@ Aggregation based on whether the drivers received points on a race or not:
 DROP VIEW IF EXISTS point_scorers;
 
 CREATE VIEW `point_scorers` AS
-SELECT raceId, driverId, forename, surname, driverRef, positionOrder, points,
+SELECT raceId, driverId, forename, surname, positionOrder, points,
 	CASE
 		WHEN points = 0
 			THEN 'No point'
