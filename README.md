@@ -116,18 +116,18 @@ BEGIN
     
     INSERT INTO tablef1
 	SELECT 
-		rr.resultId,
-                r.raceId,
-                r.raceyear,
-                r.racename,
-                d.driverId,
+		d.driverId,
                 d.forename,
                 d.surname,
                 d.drivercode,
                 d.driverRef,
-                rr.grid,
+		rr.grid,
                 rr.positionOrder,
                 rr.points,
+                r.raceId,
+                r.raceyear,
+                r.racename,
+                cir.circuitId,
                 cir.name AS circuit_name,
                 cir.country,
                 con.constructorname AS team
