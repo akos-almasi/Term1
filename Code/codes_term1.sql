@@ -98,13 +98,15 @@ DROP PROCEDURE IF EXISTS AllF1data;
 DELIMITER //
 CREATE PROCEDURE AllF1data()
 BEGIN
-	DROP TABLE IF EXISTS tablef1;
+
+DROP TABLE IF EXISTS tablef1;
+
     CREATE TABLE tablef1 AS
-			SELECT 
-				d.driverId,
+	SELECT 
+		d.driverId,
                 d.forename,
                 d.surname,
-				rr.grid,
+		rr.grid,
                 rr.positionOrder,
                 rr.points,
                 r.raceyear,
@@ -112,15 +114,15 @@ BEGIN
                 cir.name AS circuit_name,
                 cir.country,
                 con.constructorname AS team
-			FROM raceresults AS rr
-				INNER JOIN constructor AS con
-					USING (constructorId)
-				INNER JOIN drivers AS d
-					USING (driverId)
-				INNER JOIN races AS r
-					USING (raceId)
-				INNER JOIN circuits AS cir
-					USING (circuitId);
+	FROM raceresults AS rr
+		INNER JOIN constructor AS con
+			USING (constructorId)
+		INNER JOIN drivers AS d
+			USING (driverId)
+		INNER JOIN races AS r
+			USING (raceId)
+		INNER JOIN circuits AS cir
+			USING (circuitId);
 END //
 DELIMITER ;
 
@@ -134,6 +136,7 @@ SELECT * FROM tablef1;
 # create a table to log
 DROP TABLE IF EXISTS log;
 CREATE TABLE log (log VARCHAR (255) NOT NULL);
+
 # Create a trigger
 DROP TRIGGER IF EXISTS add_race;
 TRUNCATE log;
@@ -147,11 +150,11 @@ BEGIN
 	INSERT INTO log SELECT CONCAT('new.raceId: ', NEW.raceId);
     
     INSERT INTO tablef1
-		SELECT 
-				d.driverId,
+	SELECT 
+		d.driverId,
                 d.forename,
                 d.surname,
-				rr.grid,
+		rr.grid,
                 rr.positionOrder,
                 rr.points,
                 r.raceyear,
@@ -160,15 +163,15 @@ BEGIN
                 cir.country,
                 con.constructorname AS team
         FROM raceresults AS rr
-			INNER JOIN constructor AS con
-				USING (constructorId)
-			INNER JOIN drivers AS d
-				USING (driverId)
-			INNER JOIN races AS r
-				USING (raceId)
-			INNER JOIN circuits AS cir
-				USING (circuitId)
-		WHERE raceId = NEW.raceId;
+		INNER JOIN constructor AS con
+			USING (constructorId)
+		INNER JOIN drivers AS d
+			USING (driverId)
+		INNER JOIN races AS r
+			USING (raceId)
+		INNER JOIN circuits AS cir
+			USING (circuitId)
+	WHERE raceId = NEW.raceId;
 END $$
 
 DELIMITER ;
