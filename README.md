@@ -92,7 +92,7 @@ The appearance of the Datawarehouse:
 
 
 ## ETL pipeline
-Since we have many races in a year it makes sense to create an ETL pipeline to make sure that my denormalized table is up to date after a race is completed, and added to the races table.
+Since we have many races in a year it makes sense to create an ETL pipeline to make sure that my denormalized table is up to date after a race is completed.
 
 ```
 
